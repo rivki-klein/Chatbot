@@ -103,7 +103,7 @@ namespace Infrastructure
             var plugin = _pluginsManager.CreatePlugin(pluginId);
             var persistentData = _dal.LoadData(user, pluginId);
             var output = plugin.Execute(new PluginInput(input, persistentData, callbacks));
-
+             
             _dal.SaveData(user, pluginId, output.PersistentData);
             return output.Message;
         }
