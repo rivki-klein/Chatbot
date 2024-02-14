@@ -6,6 +6,7 @@ using DiceRoller;
 using Echo;
 using ListPlugin;
 using CountWord;
+using Multiplication;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,6 +50,10 @@ namespace Infrastructure
             {
                 return new CountWordPlugin();
             }
+            else if (id == MultiplicationGame._Id)
+            {
+                return new MultiplicationGame();
+            }
             else
 
             {
@@ -64,7 +69,8 @@ namespace Infrastructure
             EchoPlugin._Id,
             ListPlugin.ListPlugin._Id,
             CountTheWordsPlugin._Id,
-            CountWordPlugin._Id
+            CountWordPlugin._Id,
+            MultiplicationGame._Id
         };
     }
 }
